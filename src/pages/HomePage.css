@@ -1,0 +1,140 @@
+.homepage {
+  font-family: 'Hanson', Arial, sans-serif; /* Updated to use Hanson font */
+}
+
+.hero-section {
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-content h1 {
+  
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+  max-width: 80%; /* Added to reduce width */
+  margin-left: auto; /* Center align */
+  margin-right: auto; /* Center align */
+}
+
+.hero-content h1 .highlight {
+  
+  display: inline-block;
+  position: relative;
+  color: #000;
+  background-color: rgb(248, 195, 35); /* Added yellow background */
+  padding: 0 0.2rem; /* Added padding for better appearance */
+}
+
+.hero-content p {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 1.2rem;
+  color: #282828;
+  margin-bottom: 1.5rem;
+  max-width: 50%; /* Added to reduce width */
+  margin-left: auto; /* Center align */
+  margin-right: auto; /* Center align */
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  max-height: 300px; /* Added to crop the image */
+  object-fit: cover; /* Ensures the image is cropped properly */
+}
+
+.scroll-indicator {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #333;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 768px) { /* Tablet view */
+  .hero-content h1 {
+    font-size: 2rem;
+    max-width: 90%; /* Adjust width for smaller screens */
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    max-width: 70%; /* Adjust width for smaller screens */
+  }
+
+  .hero-image img {
+    max-height: 250px; /* Adjust image height for tablets */
+  }
+
+  
+}
+
+@media (max-width: 480px) { /* Mobile view */
+  .hero-content h1 {
+    font-size: 1.5rem;
+    max-width: 100%; /* Full width for mobile */
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+    max-width: 90%; /* Adjust width for mobile */
+  }
+
+  .hero-image img {
+    max-height: 200px; /* Adjust image height for mobile */
+  }
+
+  .scroll-indicator {
+    font-size: 0.8rem; /* Smaller font for mobile */
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align content */
+    padding: 0.5rem;
+  }
+
+  .logo {
+    font-size: 1.5rem; /* Smaller font size for mobile */
+  }
+
+  .nav ul {
+    margin-top: 30px;
+    flex-direction: column; /* Stack menu items vertically */
+    gap: 0.8rem; /* Reduce spacing for mobile */
+  }
+
+  .nav {
+    transform: translateX(-100%); /* Hide the sidebar off-screen */
+    transition: transform 0.3s ease-in-out; /* Adjusted smooth slide animation */
+    z-index: 999; /* Ensure the sidebar is above all content */
+    position: fixed; /* Fix the sidebar position */
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-toggle {
+    display: block; /* Show the toggle button on mobile */
+    background-color: #fff; /* Ensure the button has a background */
+    border-radius: 5px; /* Rounded corners for the button */
+    padding: 0.5rem 1rem; /* Padding for the button */
+  }
+  
+}
